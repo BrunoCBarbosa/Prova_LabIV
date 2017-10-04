@@ -1,0 +1,8 @@
+package prova;
+
+import javax.swing.JFrame;
+
+public class tela extends JFrame{
+	
+
+}

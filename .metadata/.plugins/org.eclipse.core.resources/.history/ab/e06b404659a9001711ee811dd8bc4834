@@ -1,0 +1,59 @@
+package prova;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Tela extends JFrame{
+
+	private static final long serialVersionUID = 6239363574615996906L;
+	
+	private JPanel contentPane;
+	
+	public Tela(){
+		this.setTitle("Prova");
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setSize(500, 450);
+		this.setLocationRelativeTo(null);
+		addComponents();
+	}
+	
+	public void addComponents(){
+		contentPane = new JPanel();
+		contentPane.setLayout(new BorderLayout());
+		this.setContentPane(contentPane);
+		
+		//WEST PANEL
+		JPanel westPanel = new JPanel();
+		westPanel.setBackground(Color.GRAY);
+		westPanel.setPreferredSize(new Dimension(150,0));
+		westPanel.setLayout(new GridBagLayout());
+		contentPane.add(westPanel, BorderLayout.WEST);
+		
+		GridBagConstraints gbc = new GridBagConstraints();
+		
+		//Botao1
+		JButton botao1 = new JButton();
+		botao1.setText("Botão 1");
+		botao1.setPreferredSize(new Dimension(90, 30));
+		gbc.gridx = 0;
+		gbc.gridy = 0;
+		westPanel.add(botao1,gbc);
+		
+		//Botao2
+		JButton botao2 = new JButton();
+		botao2.setText("Botão 2");
+		botao2.setPreferredSize(new Dimension(90, 30));
+		gbc.gridx = 0;
+		gbc.gridy = 1;
+		westPanel.add(botao2,gbc);
+		
+	}
+
+}

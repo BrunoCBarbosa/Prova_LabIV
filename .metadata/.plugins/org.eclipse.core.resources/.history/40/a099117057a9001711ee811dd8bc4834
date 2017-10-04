@@ -1,0 +1,28 @@
+package prova;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Tela extends JFrame{
+
+	private static final long serialVersionUID = 6239363574615996906L;
+	
+	private JPanel contentPane;
+	
+	public Tela(){
+		this.setTitle("Prova");
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setSize(500, 450);
+		this.setLocationRelativeTo(null);
+		addComponents();
+	}
+	
+	public void addComponents(){
+		contentPane = new JPanel();
+		contentPane.setLayout(new BorderLayout());
+		this.setContentPane(contentPane);
+	}
+
+}

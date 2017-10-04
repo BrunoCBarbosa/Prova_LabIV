@@ -1,0 +1,6 @@
+package prova;
+
+public class main {
+	Tela tela = new Tela();
+	tela.setVisible(true);
+}
